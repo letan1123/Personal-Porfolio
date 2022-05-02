@@ -1,12 +1,12 @@
 $(() => {
   //Searched up toggle class and the results were from w3school
-$('.navigation').hover(function(){
-  $(this).toggleClass('navigation-hover')
-})
+// $('.navigation').hover(function(){
+//   $(this).toggleClass('navigation-hover')
+// })
 // I searched up jquery scroll function, results are from jquery.com
 $(document).ready(function() {
   $(window).scroll(function() {
-    if(this.scrollY > 20) {
+    if(this.scrollY > 300) {
       $('.navigation').addClass('navigation-hover')
     }
     else {
@@ -15,6 +15,16 @@ $(document).ready(function() {
   })
 })
 
+$(document).ready(function() {
+  $(window).scroll(function() {
+    if(this.scrollY > 50) {
+      $('.navigation').addClass('navigation-hover-media')
+    }
+    else {
+      $('.navigation').removeClass('navigation-hover-media')
+    }
+  })
+})
 $('.dropdown').click(function(){
   $('.list').toggleClass('duty')
 })
@@ -31,25 +41,25 @@ $('#resume-icon').on('click',modal)
 
 let img = 0
 const num = $('.carousel-pictures').children().length - 1
-$('right-button').on('click', () => {
+$('.next').on('click', () => {
   $('.carousel-pictures').children().eq(img).css('display','none')
-  if(img<num) {
+  if (img < num) {
     img++
   }
-  else(
+  else {
     img = 0
-  )
+  }
+  $('.carousel-pictures').children().eq(img).css('display','block')
+})
+$('.previous').on('click', () => {
+  $('.carousel-pictures').children().eq(img).css('display','none')
+  if (img > 0) {
+    img--
+  }
+  else {
+    img = num
+  }
   $('.carousel-pictures').children().eq(img).css('display','block')
 })
 
-$('left-button').on('click', () => {
-  $('.carousel-pictures').children().eq(img).css('display','none')
-  if(img>0) {
-    img--
-  }
-  else(
-    img = num
-  )
-  $('.carousel-pictures').children().eq(img).css('display','block')
-})
 })

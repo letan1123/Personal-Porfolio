@@ -100,11 +100,12 @@
   font-family: "Tapestry", cursive;
 }
 .biography .heading {
-  font-size: 40px;
+  font-size:50px;
+  padding: 30px;
   text-align: center;
+  border-radius: 10px;
+  border: 2px solid grey;
   text-decoration: overline;
-  margin-bottom: 50px;
-  padding-bottom: 30px;
 }
 .biography .bio-info {
   display: flex;
@@ -119,6 +120,7 @@
   width: 40%;
 }
 .biography .bio-info .picture img{
+  margin-top: 20px;
   width: 300px;
   height: 300px;
   object-fit: contain;
@@ -159,9 +161,12 @@ section .resume {
   padding-top: 150px;
 }
 .resume .resume-info .heading-resume{
+  font-size:50px;
   padding: 30px;
-  font-size: 35px;
   text-align: center;
+  border-radius: 10px;
+  border: 2px solid grey;
+  text-decoration: overline;
 }
 .resume .resume-info {
   background: pink;
@@ -185,12 +190,18 @@ section .resume {
 #projects {
   heigh:100vh;
 }
-.carousel-container {
-  display: flex;
+.projects .project-container {
+  display:flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
 
+}
+.carousel-container {
+  display:inline-block;
+  width:70%;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 }
 
 .projects .heading-project {
@@ -201,17 +212,23 @@ section .resume {
   text-align: center;
   border-radius: 10px;
   border: 2px solid grey;
+  text-decoration: overline;
 }
 .carousel-pictures img {
   width: 50%;
+  height: 50vh;
   display:none;
 
 }
 .right-button {
+  display:inline-block;
+  float:right;
   font-size: 30px;
   width:20%;
 }
 .left-button {
+  display:inline-block;
+  float:left;
   font-size: 30px;
   width:20%
 }
@@ -229,9 +246,11 @@ section .resume {
 footer {
   margin-top: 50px;
   height:10vh;
+  background-color: #76E6CC;
 }
 footer ul{
-
+  padding-top: 20px;
+  text-align: center;
 }
 footer li{
   display:inline;
@@ -253,7 +272,11 @@ footer li{
     z-index: 99;
     /* z-index set the order of elements w3school */
   }
+  .navigation-hover-media{
+    background-color: #76E6CC;
+    padding: 15px;
 
+  }
   .navigation-hover {
     padding: 0;
   }
@@ -261,7 +284,7 @@ footer li{
     position: absolute;
     background: black;
     height: 100vh;
-    width: 100%;
+    width:100%;
     right:100%;
     /* left and top set the position of the element from its nearest positioned ancestor w3school*/
     top:0;
@@ -310,5 +333,9 @@ footer li{
   .resume .resume-info .resume-modal .modal-info img {
     width: 400px;
     height:400px;
+  }
+  .projects .heading-project {
+  margin-top: 400px;
+  margin-bottom: 50px;
   }
 }
