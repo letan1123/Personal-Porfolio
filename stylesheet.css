@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Tapestry&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Tapestry", cursive;
+}
+
+.container {
+  max-width: 1250px;
+  padding-left: 50px;
+  margin: auto 0;
+}
+
+.navigation {
+  position: fixed;
+  padding-top: 50px;
+  width: 100%;
+  font-family: "Tapestry", cursive;
+}
+.navigation-hover {
+  background-color: #76E6CC;
+  padding: 15px;
+}
+.navigation .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation .home a {
+  font-size: 50px;
+  font-weight: 800;
+  color: #FF1B14
+}
+.navigation .list li{
+  list-style-type: none;
+  display: inline;
+}
+.navigation .list li a{
+  color: gold;
+  margin-left: 20px;
+  font-weight: 300;
+  font-size: 20px;
+}
+.navigation .list li a:hover {
+  font-size: 1.5em;
+  color: yellow;
+}
+
+.dropdown {
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  display: none;
+}
+
+
+.homepage {
+  display:flex;
+  background: url("https://i.postimg.cc/vTwyNhbk/panda.jpg") no-repeat fixed center;
+  height: 100vh;
+  background-size: cover;
+  color: white;
+  min-height: 500px;
+}
+.homepage .home-info {
+  font-family: "Tapestry", cursive;
+}
+.homepage .container {
+  margin: auto 0;
+}
+.homepage .home-info .info1 {
+  font-size: 20px;
+}
+.homepage .home-info .info2 {
+  font-size: 25px;
+  margin-top: 10px;
+
+}
+.homepage .home-info .info3 {
+  font-size: 20px;
+  margin-top: 10px
+}
+.homepage .home-info .info4 {
+  font-size: 20px;
+  margin-top: 10px;
+}
+.homepage .home-info .info2 span {
+  color: crimson;
+}
+#biography {
+  padding-top: 100px;
+}
+
+.biography {
+  font-family: "Tapestry", cursive;
+}
+.biography .heading {
+  font-size: 40px;
+  text-align: center;
+  text-decoration: underline;
+}
+.biography .bio-info .picture img{
+  width: 400px;
+  height: 400px;
+  float:right;
+}
+
+section .biography {
+  height: 75vh;
+  width: 100%;
+}
+
+.biography .bio-info p {
+  margin-top: 20px;
+  text-indent: 30px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  word-spacing: 10px;
+}
+.biography .bio-info #icon:hover {
+  font-size: 1.5em;
+
+}
+
+.slide-menu {
+  padding: 20px;
+  display: none;
+  background-color: black;
+  color:white;
+}
+
+section .resume {
+  height: 75vh;
+  width: 100%;
+}
+#resume {
+  padding-top: 150px;
+}
+.resume .resume-info .heading-resume{
+  font-size: 35px;
+  text-align: center;
+}
+.resume .resume-info {
+  background: pink;
+  height: 30vh;
+  width: 100%;
+}
+.resume .resume-modal {
+  font-size: 30px;
+  text-align: center;
+}
+.resume .resume-modal .modal-info{
+  background-color: rgba(0,0,0,0.4);
+			position: fixed;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			z-index: 1;
+      display:none;
+      overflow:auto;
+}
+.resume .resume-modal .modal-info img {
+  display:none;
+}
+.resume .resume-info #resume-icon:hover {
+  font-size: 2em;
+  font-weight: 600px;
+  color: purple;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 0;
+  }
+  .dropdown {
+    color: white;
+    font-size: 2em;
+    display: block;
+    z-index: 99;
+    /* z-index set the order of elements w3school */
+  }
+
+  .navigation-hover {
+    padding: 0;
+  }
+  .navigation .list {
+    position: absolute;
+    background: black;
+    height: 100vh;
+    width: 100%;
+    right:100%;
+    /* left and top set the position of the element from its nearest positioned ancestor w3school*/
+    top:0;
+    padding-top: 10px;
+    transition: all 0.5s ease;
+    /* transition property allows to change property values smoothly over a duration, ease effect with a slow start then fast,  */
+  }
+  .navigation .list.duty {
+    right:0;
+  }
+  .navigation .list li {
+    display: block;
+    text-align: center;
+  }
+  .navigation .list li a {
+    display: inline-block;
+    margin: 20px;
+  }
+  .navigation .list li a:hover {
+    font-size: 1.5em;
+    color: yellow;
+  }
+  .homepage .home-info {
+    padding-top: 30px;
+  }
+  .homepage .home-info .info1 {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .homepage .home-info .info2 {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .homepage .home-info .info3 {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .homepage .home-info .info4 {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .biography .bio-info .picture img{
+    width: 200px;
+    height: 200px;
+    float:right;
+  }
+}
